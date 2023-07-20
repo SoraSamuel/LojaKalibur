@@ -23,7 +23,6 @@ a{
 }
 body{
     background-color:rgb(171, 255, 255);
-
 }
 .background{
     position: relative;
@@ -42,6 +41,7 @@ body{
     z-index: -1;
     background-size: cover;
     background-position: center;
+    background-repeat: repeat;
 }
 
 
