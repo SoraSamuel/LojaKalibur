@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swords</title>
+    <link rel="stylesheet" href="../Estilos/index.css">
+</head>
+
+<body>
+    <header>
+        <div id="title">
+            <h1>(Loja Kalibur)</h1>
+        </div>
+    </header>
+
+    <nav class="bg">
+        <div id="transparente">
+            <div class="menu">
+                <a id="iconmenu">()</a><a id="estilo" href="../index.html">Loja</a>
+                <a id="iconmenu">()</a><a id="estilo" href="../Paginas/Entrar.html">Login</a>
+                <a id="iconmenu">()</a><a id="estilo" href="../Paginas/recuperasenha.html">Alterar senha</a>
+                <a id="iconmenu">()</a><a id="estilo" href="../Paginas/novousuario.html">Fazer cadastro</a>
+            </div>
+        </div>
+    </nav>
+
+      <main>
+         <h2>Formulario:</h2>
+         <form action="#" method="post">
+            <fieldset id="login">
+               <legend>Dados Pessoais</legend>
+               <label for="email">Email:</label><br>
+               <input type="email" id="email" placeholder="nickname@email.com" required><br>
+               <label for="coisa">Nome de usuário:</label><br>
+               <input type="text" id="coisa" placeholder="username123" required><br>
+               <br>
+               <label for="idade">Idade:</label><br>
+               <input type="number" id="idade" required><br>
+               <label for="nascimento">Nascimento:</label><br>
+               <input type="date" id="nascimento" required><br>
+               <br>
+               <label for="homem">Sexo:</label><br>
+               <label for="homem">Homem</label>
+               <input type="radio" id="homem" name="sexo"><br>
+               <label for="mulher">Mulher</label>
+               <input type="radio" id="mulher" name="sexo"><br>
+               <label for="nao declarar">Não declarar</label>
+               <input type="radio" id="nao-declarar" name="sexo">
+               <br>
+               <br>
+            </fieldset>
+            <fieldset id="login">
+               <legend>Nova senha</legend>
+               <label for="senhacadastra">Criar senha:</label><br>
+               <input type="password" class="input" id="senhacadastra" required>
+               <br>
+               <label for="senharepete">Confirme a senha:</label><br>
+               <input type="password" class="input" id="senharepete" required>
+               <br>
+            </fieldset>
+            <br>
+            <button type="reset">LIMPAR CADASTRO</button><br>
+            <button type="submit" id="center">ENVIAR CADASTRO</button><br>
+         </form>
+      </main>
+      
+      <footer></footer>
+   </body>
+</html>

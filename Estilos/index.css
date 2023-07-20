@@ -1,0 +1,244 @@
+@font-face{
+    font-family: Swordsman;
+    src: url(../Fonts/Swordsman.ttf);
+}
+
+@font-face{
+    font-family: Moon;
+    src: url(../Fonts/MOONRUNE.TTF);
+}
+@font-face{
+    font-family: Crush;
+    src: url(../Fonts/CrushYourEnemies_REGULAR.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 4px;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+body{
+    background-color:rgb(171, 255, 255);
+}
+.background{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../Imagens/758657.jpg);    
+    filter:opacity(0.5);
+    z-index: -1;
+    background-size: cover;
+    background-position: center; 
+}
+footer{
+    border-bottom: 80px solid rgb(11, 23, 34);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: none;    
+}
+footer::after{
+    border-bottom: 80px solid rgb(11, 23, 34);
+    border-radius:50%;
+    position: absolute;
+    top: 50px;
+}
+
+
+/* Navegação do topo */
+nav{
+    width: 100%;
+    height: 60px;
+    border-bottom: 10px solid rgb(11, 23, 34);
+    font-weight: bolder;  
+
+}
+input,  textarea,  select,  button{
+    border: solid 1px #fffb00;
+    outline: none;
+    border-radius: 40px;
+}
+form button{
+    cursor: pointer;
+}
+ul button{
+    background-color: rgba(255, 166, 0, 0.781);
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+.menu{
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    opacity: 1;
+
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background-image: url(../Imagens/fatestay-night-saber.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%; 
+}
+#transparente{
+    width: 99%;
+    height: 90px;
+    background-color: rgba(255, 166, 0, 0.322);
+    border-radius: 100%;
+}
+/* fim da navegação */
+
+/* Aqui eu faço o container principal dos itens da página da loja */
+#container{
+    display: flex;
+    justify-content:space-between;
+}
+.esquerdacontainer{
+    height: auto;    
+}
+#bleach{
+    color: white;
+}
+#bleach:hover{
+    color: black;
+}
+
+.categorias{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+#subtitle{
+    color: black;
+    font-family: Crush;
+    font-size:small;
+}
+ul.categorias {
+    padding: 20px 0;
+}
+.direitacontainer{
+    display: table;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 8px 10px;
+}
+.produto{
+    display: table-row;
+}
+.iconproduto{
+    width: 135px;
+    height: 175px;
+    float: left;
+    box-shadow: 0 0.25rem 0.30rem 0 rgba(10, 10, 10, 0.12),0 0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.07);
+    border-radius: 0.5em;
+    margin: 5px;
+}
+.icondescricao{
+    width: 71px;
+    height: 175px;
+    float: left;
+    margin: 5px; 
+    display: flex;
+    justify-content: center; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(6, 6, 112); 
+    opacity : 0.7;  
+}
+.iconproduto:hover{
+    box-shadow:  0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.171);
+}
+/* Meu objetivo é deixar essa página bastante limpa e fácil de navegar */
+
+
+/* Login e cadastro */
+/* servirá para o usuário criar um carrinhos de compras e favoritar ou salvar produtos */
+/* algo como a mochila de um aventureiro ^^ */
+#login{
+    background-color: aliceblue;
+}
+#title{
+    font-family: Swordsman;
+}
+#estilo{
+    color: white;
+}
+#estilo:hover {
+    color:antiquewhite;
+    box-shadow:  0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.363);
+  }
+#confirmacao{
+    text-align: center;
+}
+#reenviar{
+    background-color: aqua;
+    border-bottom: 1px solid black;
+}
+#center{
+    text-align: center;
+}
+#right{
+    text-align: right;
+}
+#iconmenu{
+    font-family: Swordsman;
+    color: black;
+}
+
+
+/* Aqui começa a galeria de itens */
+/* tentei colocar uma scroll pra fazer um carrossel mas aparentemente preciso formatar outras configurações */
+/* esse comando é mais sensível do que imaginei 'o' */
+#secaoreplicas{    
+    width: 500px;
+    height: 150px;
+    display: flex;
+}
+.replicas{
+    width: 20%;
+    height: auto; 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 1%;
+    box-shadow: 0 0.25rem 0.30rem 0 rgba(10, 10, 10, 0.12),0 0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.07);  
+}
+.replicas:hover{
+    box-shadow:  0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.171);
+} 
+#replica1{
+    background-image: url(../Imagens/swordlinkzelda.jpg);    
+}
+#replica2{
+    background-image: url(../Imagens/swordlinkzelda.jpg);
+}
+#replica3{
+    background-image: url(../Imagens/swordlinkzelda.jpg);
+}
+#replica4{
+    background-image: url(../Imagens/swordlinkzelda.jpg);
+}
+#replica5{
+    background-image: url(../Imagens/swordlinkzelda.jpg);
+}
+/* terminando galeria */
