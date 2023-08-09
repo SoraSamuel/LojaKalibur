@@ -1,0 +1,214 @@
+@font-face{
+    font-family: Swordsman;
+    src: url(../fonts/Swordsman.ttf);
+}
+@font-face{
+font-family: Moon;
+src: url(../fonts/MOONRUNE.TTF);
+}
+@font-face{
+font-family: Crush;
+src: url(../fonts/CrushYourEnemies_REGULAR.ttf);
+}
+
+*{
+margin: 0px;
+padding: 0px;
+list-style: none;        
+}
+a{
+text-decoration: none;
+color: black;
+}
+body{
+background-color:rgb(171, 255, 255);
+}
+
+.background{
+position: relative;
+width: 100%;
+height: 100%;
+}
+.background::before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: url(../images/758657.jpg);    
+filter:opacity(0.5);
+z-index: -1;
+background-size: cover;
+background-position: center;
+background-repeat: repeat;
+}
+
+.menu{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/fatestay-night-saber.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%; 
+}
+#transparente{
+    width: 99%;
+    height: 90px;
+    background-color: #ffa60052;
+    border-radius: 100%;
+}
+
+
+
+/* Navegação do topo */
+nav{
+width: 100%;
+height: 60px;
+border-bottom: 10px solid rgb(11, 23, 34);
+font-weight: bolder;
+
+}
+input,  textarea,  select,  button{
+border: solid 1px #fffb00;
+outline: none;
+border-radius: 40px;
+}
+form button{
+cursor: pointer;
+}
+ul button{
+background-color: rgba(255, 166, 0, 0.781);
+border-radius: 5px;
+width: 100%;
+height: auto;
+padding: 5px;
+}
+
+
+/*itens das outras páginas*/ 
+#login{
+    background-color: aliceblue;
+}
+#title{
+    font-family: Swordsman;
+}
+#estilo{
+    color: white;
+}
+#estilo:hover {
+    color: #382503;  
+    box-shadow:  0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.363);
+  }
+#confirmacao{
+    text-align: center;
+}
+#reenviar{
+    background-color: aqua;
+    border-bottom: 1px solid black;
+}
+#center{
+    text-align: center;
+}
+#right{
+    text-align: right;
+}
+#iconmenu{
+    font-family: Swordsman;
+    color: black;
+}
+
+/*Menu lateral*/
+#menuleft{
+    width: auto;
+    height: auto;
+
+}
+#bleach{
+    color: white;
+    font-weight: bolder;
+    font-size:medium;
+}
+#bleach:hover{
+    color:#382503;
+}
+
+.categorias{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    
+}
+.categorias button:hover{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+
+}
+#subtitle{
+    color: black;
+    font-family: Crush;
+    font-size:small;
+}
+ul.categorias {
+    padding: 20px 0;
+}
+
+/*Carrosel de Imagens*/
+
+#itemcarrosel{
+    width: 20%;
+    height: auto; 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2%;
+    box-shadow: 0 0.25rem 0.30rem 0 rgba(10, 10, 10, 0.12),0 0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.07);  
+}
+#itemcarrosel:hover{
+    box-shadow:  0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.171);
+}
+/* substituindo as setas*/
+.carousel-control-prev::before {
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image:cover
+}
+.carousel-control-prev {
+    background-image: url("../images/setaesquerda.png");
+    background-size: cover;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 25px;
+}
+.carousel-control-next::before {
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image:cover
+  }
+.carousel-control-next {
+    background-image: url("../images/setadireita.png");
+    background-size: cover;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 25px;
+}
+
+/*Fim do carrosel*/ 
