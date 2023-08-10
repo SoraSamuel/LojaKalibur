@@ -1,14 +1,14 @@
 @font-face{
-font-family: swordsman;
-src: url(./fonts/Swordsman.ttf);
+font-family: Swordsman;
+src: url(../fonts/Swordsman.ttf);
 }
 @font-face{
-font-family: moon;
-src: url(./fonts/MOONRUNE.TTF);
+font-family: Moon;
+src: url(../fonts/MOONRUNE.TTF);
 }
 @font-face{
-font-family: crush;
-src: url(./fonts/CrushYourEnemies_REGULAR.ttf);
+font-family: Crush;
+src: url(../fonts/CrushYourEnemies_REGULAR.ttf);
 }
 
 *{
@@ -97,12 +97,12 @@ padding: 5px;
 }
 
 
-/*itens das outras páginas*/ 
+/*itens das páginas*/ 
 #login{
     background-color: aliceblue;
 }
 #title{
-    font-family: swordsman;
+    font-family: Swordsman;
 }
 #estilo{
     color: white;
@@ -125,7 +125,7 @@ padding: 5px;
     text-align: right;
 }
 #iconmenu{
-    font-family: swordsman;
+    font-family: Swordsman;
     color: black;
 }
 
@@ -158,7 +158,7 @@ padding: 5px;
 }
 #subtitle{
     color: black;
-    font-family: crush;
+    font-family: Crush;
     font-size:small;
 }
 ul.categorias {
@@ -181,9 +181,7 @@ ul.categorias {
 }
 /* substituindo as setas*/
 
- .carousel-control-prev::before {
-    background-color: transparent;
- }
+
 .carousel-control-prev {
     background-image: url("../images/setaesquerda.png");
     background-size: cover;
@@ -192,9 +190,7 @@ ul.categorias {
     display: inline-block;
     padding: 2.8vh;
 }  
- .carousel-control-prev::before {
-    background-color: transparent;
- }
+
 .carousel-control-next {
     background-image: url("../images/setadireita.png");
     background-size: cover;
