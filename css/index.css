@@ -180,35 +180,102 @@ ul.categorias {
     box-shadow:  0.12rem 0.25rem .06rem rgba(26, 25, 25, 0.171);
 }
 /* substituindo as setas*/
-.carousel-control-prev::before {
+
+ .carousel-control-prev::before {
     background-color: transparent;
-    border: none;
-    width: 24px;
-    height: 24px;
-    background-image:cover
-}
+ }
 .carousel-control-prev {
     background-image: url("../images/setaesquerda.png");
     background-size: cover;
     width: auto;
     height: auto;
     display: inline-block;
-    padding: 25px;
-}
-.carousel-control-next::before {
+    padding: 2.8vh;
+}  
+ .carousel-control-prev::before {
     background-color: transparent;
-    border: none;
-    width: 24px;
-    height: 24px;
-    background-image:cover
-  }
+ }
 .carousel-control-next {
     background-image: url("../images/setadireita.png");
     background-size: cover;
     width: auto;
     height: auto;
     display: inline-block;
-    padding: 25px;
+    padding: 2.7vh;
 }
+@media (max-width: 320px){
+    .carousel-control-prev::before {
+        background-color: transparent;
+     }
+    .carousel-control-prev {
+        background-image: url("../images/setaesquerda.png");
+        background-size: cover;
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding:1.1vh;        
+    }  
+     .carousel-control-prev::before {
+        background-color: transparent;
+     }
+    .carousel-control-next {
+        background-image: url("../images/setadireita.png");
+        background-size: cover;
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding: 1.0vh;
+    }      
+}
+
+@media (max-width: 766px) and (min-width: 321px) {
+    .carousel-control-prev::before {
+        background-color: transparent;
+     }
+    .carousel-control-prev {
+        background-image: url("../images/setaesquerda.png");
+        background-size: cover;
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding:2.0vh;        
+    }  
+     .carousel-control-prev::before {
+        background-color: transparent;
+     }
+    .carousel-control-next {
+        background-image: url("../images/setadireita.png");
+        background-size: cover;
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding: 1.9vh;
+    }      
+}
+@media (min-width: 1200px){
+    .carousel-control-prev::before {
+        background-color: transparent;
+     }
+    .carousel-control-prev {
+        background-image: url("../images/setaesquerda.png");
+        background-size: cover;
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding:4.6vh;        
+    }  
+     .carousel-control-prev::before {
+        background-color: transparent;
+     }
+    .carousel-control-next {
+        background-image: url("../images/setadireita.png");
+        background-size: cover;
+        width: auto;
+        height: auto;
+        display: inline-block;
+        padding: 4.5vh;
+    }      
+}
+
 
 /*Fim do carrosel*/ 
