@@ -1,14 +1,14 @@
 @font-face{
 font-family: Swordsman;
-src: url(../fonts/Swordsman.ttf);
+src: url(../Fonts/Swordsman.ttf);
 }
 @font-face{
 font-family: Moon;
-src: url(../fonts/MOONRUNE.TTF);
+src: url(../Fonts/MOONRUNE.TTF);
 }
 @font-face{
 font-family: Crush;
-src: url(../fonts/CrushYourEnemies_REGULAR.ttf);
+src: url(../Fonts/CrushYourEnemies_REGULAR.ttf);
 }
 
 *{
