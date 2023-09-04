@@ -16,6 +16,7 @@ margin: 0px;
 padding: 0px;
 list-style: none;        
 }
+
 a{
 text-decoration: none;
 color: black;
@@ -23,7 +24,6 @@ color: black;
 body{
 background-color:rgb(171, 255, 255);
 }
-
 .background{
 position: relative;
 width: 100%;
@@ -44,6 +44,7 @@ background-position: center;
 background-repeat: repeat;
 }
 
+/*Navegação Principal */
 .menu{
     width: 100%;
     height: 100%;
@@ -51,8 +52,11 @@ background-repeat: repeat;
     gap: 10px;
     align-items: center;
     justify-content: center;
-    font-size: large;
-    
+    font-size: large;   
+}
+.menu b{
+    font-family: Swordsman;
+    color: black;
 }
 .bg{
     width: 100%;
@@ -71,9 +75,7 @@ background-repeat: repeat;
 }
 
 
-
-/* Navegação do topo */
-
+/* Itens da Navegação */
 nav{
 width: 100%;
 height: 60px;
@@ -97,7 +99,7 @@ padding: 5px;
 }
 
 
-/*itens das páginas*/ 
+/*Itens das páginas*/ 
 #login{
     background-color: aliceblue;
 }
@@ -124,10 +126,99 @@ padding: 5px;
 #right{
     text-align: right;
 }
-#iconmenu{
-    font-family: Swordsman;
-    color: black;
+
+/* Modal */
+
+/* Estilos básicos do modal */
+#myDialog {
+    position: fixed;
+    right: 0%;
+    left: 70%;
+    width: 320px;
+    height: auto;
 }
+#myDialog.slide-in {
+    /* Aplicando a animação de entrada e definindo a duração */
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out; /* Opcional: definindo a função de temporização */
+}
+#myDialog.slide-out {
+    /* Aplicando a animação de saída e definindo a duração */
+    animation-name: slide-out;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out; /* Opcional: definindo a função de temporização */
+}
+dialog{
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgba(0,0,0,0.3);
+}
+dialog::backdrop{
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Perfil do Usuário */
+.card {
+    border: none;
+    border-radius: 10px
+}
+.c-details span {
+    font-weight: 300;
+    font-size: 13px
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(/images/Perfil.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 39px
+    
+}
+.badge span {
+    background-color: #fffbec;
+    width: 60px;
+    height: 25px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+    display: flex;
+    color: #fed85d;
+    justify-content: center;
+    align-items: center
+}
+.progress {
+    height: 10px;
+    border-radius: 10px
+}
+.progress div {
+    background-color: red
+}
+.text1 {
+    font-size: 14px;
+    font-weight: 600
+}
+.text2 {
+    color: #a5aec0
+}
+
+/* Botão do modal  */
+#modalButton{
+    color: white;
+    width: 80px;
+    height: 50px;
+    background: url('/images/Perfil.png');
+    background-size: cover;
+}
+#modalButton:hover{
+    color: #382503;
+}
+
+/** Fim do Modal */
 
 /*Menu lateral*/
 #menuleft{
@@ -135,12 +226,7 @@ padding: 5px;
     height: auto;
 
 }
-#bleach{
-    color: white;
-    font-weight: bolder;
-    font-size:medium;
-}
-#bleach:hover{
+.categorias a:hover{
     color:#382503;
 }
 
@@ -148,7 +234,11 @@ padding: 5px;
     display: flex;
     flex-direction: column;
     width: 150px;
-    
+}
+.categorias a{
+    color: white;
+    font-weight: bolder;
+    font-size:medium;
 }
 .categorias button:hover{
     background-color: aqua;
@@ -166,7 +256,6 @@ ul.categorias {
 }
 
 /*Carrosel de Imagens*/
-
 #itemcarrosel{
     width: 20%;
     height: auto; 
@@ -181,6 +270,7 @@ ul.categorias {
 }
 /* substituindo as setas*/
 
+
 .carousel-control-prev {
     background-image: url("../images/setaesquerda.png");
     background-size: cover;
@@ -188,8 +278,8 @@ ul.categorias {
     height: auto;
     display: inline-block;
     padding: 2.8vh;
-    z-index: 1;
 }  
+
 .carousel-control-next {
     background-image: url("../images/setadireita.png");
     background-size: cover;
@@ -197,21 +287,47 @@ ul.categorias {
     height: auto;
     display: inline-block;
     padding: 2.7vh;
-    z-index: 1;
 }
+/*Animações*/
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-out {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+
 /* Reposividade no carrosel */
 @media (max-width: 320px){
-
+    .carousel-control-prev::before {
+        background-color: transparent;
+     }
     .carousel-control-prev {
         background-image: url("../images/setaesquerda.png");
         background-size: cover;
         width: auto;
         height: auto;
         display: inline-block;
-        padding:1.1vh;
-        z-index: 1 ;        
+        padding:1.1vh;        
     }  
-
+     .carousel-control-prev::before {
+        background-color: transparent;
+     }
     .carousel-control-next {
         background-image: url("../images/setadireita.png");
         background-size: cover;
@@ -219,22 +335,24 @@ ul.categorias {
         height: auto;
         display: inline-block;
         padding: 1.0vh;
-        z-index: 1 ;     
     }      
 }
 
 @media (max-width: 766px) and (min-width: 321px) {
-
+    .carousel-control-prev::before {
+        background-color: transparent;
+     }
     .carousel-control-prev {
         background-image: url("../images/setaesquerda.png");
         background-size: cover;
         width: auto;
         height: auto;
         display: inline-block;
-        padding:2.0vh;
-        z-index: 1 ;             
+        padding:2.0vh;        
     }  
-
+     .carousel-control-prev::before {
+        background-color: transparent;
+     }
     .carousel-control-next {
         background-image: url("../images/setadireita.png");
         background-size: cover;
@@ -242,21 +360,23 @@ ul.categorias {
         height: auto;
         display: inline-block;
         padding: 1.9vh;
-        z-index: 1 ;      
     }      
 }
 @media (min-width: 1200px){
-
+    .carousel-control-prev::before {
+        background-color: transparent;
+     }
     .carousel-control-prev {
         background-image: url("../images/setaesquerda.png");
         background-size: cover;
         width: auto;
         height: auto;
         display: inline-block;
-        padding:4.6vh;
-        z-index: 1 ;                             
+        padding:4.6vh;        
     }  
-
+     .carousel-control-prev::before {
+        background-color: transparent;
+     }
     .carousel-control-next {
         background-image: url("../images/setadireita.png");
         background-size: cover;
@@ -264,9 +384,45 @@ ul.categorias {
         height: auto;
         display: inline-block;
         padding: 4.5vh;
-        z-index: 1 ;          
     }      
 }
-
-
 /*Fim do carrosel*/ 
+
+/*Reponsividade no Menu*/
+@media (max-width: 320px){
+    .bg{
+        border-radius: 0%;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Quebra para a próxima linha quando não há espaço suficiente */
+      }
+    
+      .menu p a {
+        flex-basis: 50%; /* Dois itens em uma linha com um espaço de 10px entre eles */
+        padding: 1px; /* Espaço entre os itens */
+        text-align: center; /* Centraliza o texto */
+      }
+    
+      .menu button {
+        flex-basis: 100%; /* Um item em uma linha, ocupa toda a largura */
+        margin-top: 94px; /* Espaço entre as linhas */
+      }
+}
+@media (max-width: 766px) and (min-width: 321px) {
+    .bg{
+        border-radius: 0%;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Quebra para a próxima linha quando não há espaço suficiente */
+      }
+    
+      .menu p a {
+        flex-basis: 50%; /* Dois itens em uma linha com um espaço de 10px entre eles */
+        padding: 1px; /* Espaço entre os itens */
+        text-align: center; /* Centraliza o texto */
+      }  
+}
