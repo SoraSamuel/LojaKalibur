@@ -128,14 +128,18 @@ padding: 5px;
 }
 
 /* Modal */
-
 /* Estilos básicos do modal */
 #myDialog {
     position: fixed;
-    right: 0%;
-    left: 70%;
+    right: 1px;
+    left: auto;
     width: 320px;
     height: auto;
+}
+#closeButton{
+    height: 40px;
+    color: #382503;
+    padding: 3px;
 }
 #myDialog.slide-in {
     /* Aplicando a animação de entrada e definindo a duração */
@@ -151,12 +155,13 @@ padding: 5px;
 }
 dialog{
     border: none;
-    border-radius: .5rem;
+    border-radius: 2rem 0 0 2rem;
     box-shadow: 0 0 1em rgba(0,0,0,0.3);
 }
 dialog::backdrop{
     background-color: rgba(0,0,0,0.5);
 }
+
 
 /* Perfil do Usuário */
 .card {
@@ -164,7 +169,7 @@ dialog::backdrop{
     border-radius: 10px
 }
 .c-details span {
-    font-weight: 300;
+    font-weight: 30;
     font-size: 13px
 }
 .icon {
@@ -389,7 +394,8 @@ ul.categorias {
 /*Fim do carrosel*/ 
 
 /*Reponsividade no Menu*/
-@media (max-width: 320px){
+
+@media (max-width: 354px){
     .bg{
         border-radius: 0%;
     }
@@ -407,10 +413,10 @@ ul.categorias {
     
       .menu button {
         flex-basis: 100%; /* Um item em uma linha, ocupa toda a largura */
-        margin-top: 94px; /* Espaço entre as linhas */
+        margin-top: 6rem; /* Espaço entre as linhas */
       }
 }
-@media (max-width: 766px) and (min-width: 321px) {
+@media (max-width: 766px) and (min-width: 355px) {
     .bg{
         border-radius: 0%;
     }
@@ -421,8 +427,8 @@ ul.categorias {
       }
     
       .menu p a {
-        flex-basis: 50%; /* Dois itens em uma linha com um espaço de 10px entre eles */
+        flex-basis: 50%; /* Dois itens em uma linha */
         padding: 1px; /* Espaço entre os itens */
         text-align: center; /* Centraliza o texto */
-      }  
+      }
 }
