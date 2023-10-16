@@ -140,6 +140,7 @@ padding: 5px;
     height: 40px;
     color: #382503;
     padding: 2px;
+    background-color: white;
 }
 #myDialog.slide-in {
     /* Aplicando a animação de entrada e definindo a duração */

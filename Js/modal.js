@@ -37,3 +37,43 @@ $(document).ready(function() {
         $('#myDialog').removeClass('slide-in slide-out');
     });
 });
+
+/* document.addEventListener('DOMContentLoaded', function() {
+    var toggleDialogBtn = document.getElementById('modalButton');
+    var myDialog = document.getElementById('myDialog');
+    var closeDialogBtn = document.getElementById('closeButton');
+
+    toggleDialogBtn.addEventListener('click', function() {
+        if (myDialog.open) {
+            // Adiciona a classe de animação de saída e fecha o modal
+            myDialog.classList.add('slide-out');
+            myDialog.close();
+        } else {
+            // Remove a classe de animação de saída, se ainda existir
+            myDialog.classList.remove('slide-out');
+
+            // Adiciona a classe de animação de entrada e abre o modal
+            myDialog.classList.add('slide-in');
+            myDialog.showModal();
+        }
+    });
+
+    closeDialogBtn.addEventListener('click', function() {
+        // Adiciona a classe de animação de saída e fecha o modal
+        myDialog.classList.add('slide-out');
+        myDialog.close();
+    });
+
+    document.addEventListener('click', function(event) {
+        if (event.target === myDialog) {
+            // Adiciona a classe de animação de saída e fecha o modal
+            myDialog.classList.add('slide-out');
+            myDialog.close();
+        }
+    });
+
+    // O evento 'animationend' remove as classes de animação após a conclusão da animação
+    myDialog.addEventListener('animationend', function() {
+        myDialog.classList.remove('slide-in', 'slide-out');
+    });
+}); */
